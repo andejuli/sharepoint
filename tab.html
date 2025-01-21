@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Tabs</title>
+    
+</head>
+<body>
+    <style>
+        /* General styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .tab-menu {
+          display: flex;
+          background-color: #333;
+          overflow: hidden;
+        }
+    
+        .tab-menu button {
+          flex: 1;
+          padding: 14px 16px;
+          background-color: #333;
+          color: white;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+          font-size: 16px;
+        }
+    
+        .tab-menu button:hover {
+          background-color: #555;
+        }
+    
+        .tab-menu button.active {
+          background-color: #007BFF;
+        }
+    
+        .tab-content {
+          display: none;
+          padding: 20px;
+          border-top: 2px solid #007BFF;
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          font-size: 1.2em;
+        }
+    
+        .tab-content.active {
+          display: block;
+        }
+        /*Intro*/
+        #knot {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        /*Changes*/
+        /* Style the buttons that are used to open and close the accordion panel */
+            .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-size: 1.3em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            .active, .accordion:hover {
+            background-color: #ccc;
+            }
+            .icon {
+                margin-left: auto;
+            }
+            .panel.show {
+                display: block;
+            }
+            /* Style the accordion panel. Note: hidden by default */
+            .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            
+            }
+            .panel li {
+                padding-bottom: 5px;
+            }
+        @media screen and (max-width: 750px) {
+            .tab-menu {
+                flex-direction: column;
+            }
+        }
+      </style>
+    <!-- Tab Menu -->
+  <div class="tab-menu">
+    <button data-tab="tab1" class="tab-button active">Introduction</button>
+    <button data-tab="tab2" class="tab-button">Plan Change</button>
+    <button data-tab="tab3" class="tab-button">Principles</button>
+    <button data-tab="tab4" class="tab-button">Standards</button>
+    <button data-tab="tab5" class="tab-button">Outcomes Rubrics</button>
+    <button data-tab="tab6" class="tab-button">Process</button>
+    <button data-tab="tab7" class="tab-button">Questions</button>
+    <button data-tab="tab8" class="tab-button">Timing</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="tab1" class="tab-content active">
+    <h2>Introduction</h2>
+    <p>Curriculum change can be a blessing for your students. It provides you with an opportunity to keep your program current, to trim fat, and to organize your courses in a way that will be meaningful and logical. </p>
+    <p>However… </p>
+    <p>You will find that students benefit from having a stable curriculum and that too many changes can hamper their ability to navigate your program.</p>
+    <p>Curriculum change is probably the most complex knot you can get yourself tied up in, and it  creates short- and long-term impacts for yourself and for you students. </p>
+    <img id="knot" src="knot.webp" alt="rope in a knot">
+    <p>In this notebook, we have attempted to summarize information about curriculum change. While we have attempted to cover many topics, we know we have not covered every contingency and issue. Your Associate Dean of Curriculum, the Dean, individuals in SRR, and current and former chairs should be considered essential resources as you move forward with curriculum change. </p>
+    <p>Involve SRR (Laurie Williams, williamsla@byui.edu) - If you have questions or if what you are doing seems complicated -- this is best done earlier rather than later.</p>
+    <p>If you have questions that involve degree audits or iPlan, contact Parker Johnson in SRR.</p>
+  </div>
+  <div id="tab2" class="tab-content">
+    <h2>Planning Change</h2>
+
+    <button class="accordion">General Standards <span class='icon'>+</span></button>
+    <div class="panel">
+        <p>Courses and Programs must have an Outcomes centric design. The syllabus or program justification must show how the outcomes are central and are incorporated into the course or program design. 
+        </p>
+        <p>Key assessments must be tied to each outcome and be common between sections. Each outcome should have a way of indicating how well it is being met. These assessments need to be sustainable and specific enough for improvements to be made in a periodic cycle. An assessment calendar must be included as part of the plan for programs. 
+        </p>
+        <p></p>No net new course or programs. New program may be approved if they are fully nested in existing program. 
+        </p>
+    </div>
+
+    <button class="accordion">Program Specific Standards <span class='icon'>+</span> </button>
+    <div class="panel">
+        <p>Programs should have a simple design. Emphasis areas and major electives should be minimized or eliminated so students can focus on key core concepts. Cross-disciplinary connections should be made to reduce duplication of classes and increase appropriate breadth in degrees.</p>
+        <p>Programs are to take a holistic approach by tying all pieces of the degree together.
+            It is preferred that substantive changes "come forward during program reviews instead of each year." The purpose for this is to ensure changes have been thoughtfully considered, advisory boards consulted, and to improve stability in curriculum for students.
+            Nest or stack curriculum elements in ways that show deliberate design to bless the lives of all students.</p>
+        <p>All courses included in a program proposal outside the sponsoring department need to show that the other department has been contacted and agrees with the class being included in or removed from the program.</p>
+        <p>Development of programs and even courses should be done in consultation with those in industry who are most likely to hire our students and who understand what the students need. All programs should have an Advisory Council (good use of alumni) made-up of the experts who see where the job market is going
+            keep program credits within the limit for the currently designated degree. [e.g., moving from a standard degree to an integrated standard degree will not be approved.] [Credit limits are in the attached “Curriculum Guidelines and Standards” document.]</p>
+        <p>We cannot provide everything, so what we provide must be carefully considered. Programs that are offered should be scalable, meaning that serving more students it's accomplished by adding more sections and having online options for the right set of courses. In general, there will be no net new programs. </p>
+    </div>
+
+    <button class="accordion">Course Specific Standards <span class='icon'>+</span></button>
+    <div class="panel">
+        <ol>
+            <li>No net new courses - If new courses are proposed, a plan for meeting the needs of those new courses within existing resources must be provided. Our hope is at least a 1:1 ratio of new courses with courses being discontinued.</li>
+            <li>Eliminate duplication of courses across departments - Departments work together to best meet the needs of students with the goal of minimizing or eliminating duplication. Follow contact hour guidelines - These are based on Department of Education definitions including credit hours awarded and type of contact - 1 credit of “lecture” allows 1 instructor/student contact hour per week. 1 credit of “lab or guided instruction” allows 1-3 instructor/student contact hours per week. Total student workload, including contact hours, should be around 3 hours per week per credit for all courses.</li>
+            <li>If travel for a course requires students to spend time outside of regularly scheduled class times, it must be in the syllabus, be required of all sections, and demonstrate how it is necessary to meet course outcomes. For the benefit of students and colleagues across campus, this should be kept to a minimum, focusing only on the most necessary experiences. Course fees - Should be minimized, and if proposed, must meet fee guidelines. (See Course Fee Guideline document)</li>
+            <li>For courses which have multiple sections, common Student-Learning Outcomes, Key assessments which indicate common outcome attainment, and general content must be the same. Teaching pedagogy can vary between sections and modes of delivery. Our curriculum management tool (CMT – or Kuali) will be the official repository of all Student-Learning Outcomes. Any changes to these Student-Learning Outcomes will need to go through the regular curriculum change process.</li>
+        </ol>
+    </div>
+    <button class="accordion">Certificate Specific Standards <span class='icon'>+</span></button>
+    <div class="panel">
+        <ol>
+            <li>Builds toward an employer identified skill set that will give students an advantage in the job market</li>
+            <li>Has defined outcomes and assessments that measure the job skill development that is the focus of the certificate. Has defined outcomes that message to students and employers the job skills that are developed by completing the certificate. Outcomes are mapped to assessments that measure the job skill development that is the focus of the certificate.</li>
+            <li>Must be between 12-15 credits</li>
+            <li>If it is designated as an advanced certificate, the prerequisites must be included in the program of study</li>
+            <li>Must be nested in an associate degree or bachelor’s degree</li>
+            <li>Certificates will be evaluated during regular program reviews to determine if they are still meeting the established criteria and outcomes are being measured and met
+                Use other terms (module, cluster) to distinguish parts of a degree that do not fit the definition of a certificate</li>
+            <li>Certificates will not be “officially” awarded unless at least 6 credits are completed with BYU-Idaho coursework</li>
+            <li>Marketing must be careful to indicate that this is part of a degree and not a stand-alone option that students can choose. Students can add a certificate with elective credits, like they would add a minor</li>
+            <li>Students cannot “declare” a certificate as their only path of study. They must declare an associate degree or a bachelor’s degree</li>
+            <li>Subject to approval by Curriculum Council, Deans Council, and President’s Council </li>
+        </ol>
+    </div>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>Tab 3 Content</h2>
+        <p>This is the content for Tab 3.</p>
+    </div>
+
+  <script>
+    // Add event listeners to tab buttons
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+
+        // Remove "active" class from all buttons and contents
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        // Add "active" class to the clicked button and corresponding content
+        button.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    //Accordian
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      this.querySelector('.icon').textContent = '+'; // Change to plus when collapsed
+    } else {
+      panel.style.display = "block";
+      this.querySelector('.icon').textContent = '-'; // Change to minus when expanded
+      }
+  });
+}
+  </script>
+
+</body>
+</html>
