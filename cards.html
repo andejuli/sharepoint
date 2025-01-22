@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 35px;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 10px; 
+            width: 180px;
+            height: 180px;
+            margin: 20px;
+        }
+        .card h2 {
+            text-align: center;
+            margin: 0;
+            padding-top: 25px;
+            color: white;
+        }
+        h4 {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #002050;
+            height: 50px;
+        }
+        figure {
+            
+            margin: 0;
+            text-align: center;
+        }
+        figcaption {
+            font-size: .9em;
+        }
+        /* On mouse-over, add a deeper shadow */
+            .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .date-courses, .date-programs {
+            
+            height: 80px;
+            border-radius: 10px 10px 0 0;
+        }
+        .date-courses {
+            background-color: #002050;
+        }
+        .date-programs {
+            background-color: #004b1c;
+        }
+        .bottom-courses, .bottom-programs {  
+            height: 45px;
+            border-radius: 0 0 10px 10px;
+            margin: 0;
+        }
+        .bottom-courses {
+            background-color: #002050;
+        }
+        .bottom-programs {
+            background-color: #004b1c;
+        }
+        /* Add some padding inside the card container */
+            .text {
+            padding: 0 16px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="card">
+            <div class="date-courses">
+                <h2>Jan 1</h2>
+            </div>
+            <div class="text">
+            <h4><b>Kuali Opens for Course Changes</b></h4>
+            
+            </div>
+            <div class="bottom-courses">
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <div class="date-courses">
+                    <h2>Mar 21</h2>
+                </div>
+                <div class="text">
+                <h4><b>Kuali Closes for Courses</b></h4>
+                </div>
+                <div class="bottom-courses">
+                </div>
+                <figcaption>Any courses not past College CC in the workflow will not be considered for 2026 catalog</figcaption>
+            </figure>
+
+        </div>
+        <div class="card">
+            <figure>
+                <div class="date-courses">
+                    <h2>Apr 4</h2>
+                </div>
+                <div class="text">
+                <h4><b>Departments Notified of Course Changes</b></h4>
+                
+                </div>
+                <div class="bottom-courses">
+
+                </div>
+            </figure>
+        </div>
+
+        <!--Programs-->
+
+        <div class="card">
+            <figure>
+                <div class="date-programs">
+                    <h2>Apr 21</h2>
+                </div>
+                <div class="text">
+                <h4><b>Kuali Opens for Program Changes</b></h4>
+                
+                </div>
+                <div class="bottom-programs">
+
+                </div>
+            </figure>
+        </div>
+        <div class="card">
+            <figure>
+                <div class="date-programs">
+                    <h2>Jun 6</h2>
+                </div>
+                <div class="text">
+                <h4><b>Kuali Closes for Programs</b></h4>
+                </div>
+                <div class="bottom-programs">
+                    
+                </div>
+                <figcaption>Any programs not past College CC in the workflow will not be considered for the 2026 catalog</figcaption>
+            </figure>
+        </div>
+        <div class="card">
+            <figure>
+                <div class="date-programs">
+                    <h2>Dec 1</h2>
+                </div>
+                <div class="text">
+                <h4><b>Check Changes & Requirements in Catalog</b></h4>
+                
+                </div>
+                <div class="bottom-programs">
+                
+                </div>
+                <figcaption>Check the new Degree Audit. In Kuali, Additional Documentation, click the pdf file under SRR Documentation</figcaption>
+            </figure>
+        </div>
+    </div>  
+</body>
+</html>
