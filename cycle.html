@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLRC Cycle</title>
+    <style>
+        #cycle {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            min-width: 700px;
+            
+        }
+        #arrow1, #arrow2, #arrow3 {
+            width: 100%;
+        }
+        #icon-1, #icon-2, #icon-3, #icon-4 {
+            width: 100%;
+            transition: transform .6s;
+        }
+        #icon-1:hover, #icon-2:hover, #icon-3:hover, #icon-4:hover {
+            transform: scale(1.1);
+            opacity: .8;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+        #plo, #clo, #assess, #review {
+            text-align: center;
+            align-self: end;
+            /* width: 150px; */
+            
+        }
+        #plo {
+            grid-column: 1/2;
+            grid-row: 2/3
+        }
+        #clo {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        #assess {
+            grid-column: 5/6;
+            grid-row: 2/3;
+        }
+        #review {
+            grid-column: 7/8;
+            grid-row: 1/2;
+        }
+        #icon-1 {
+            grid-column: 1/2;
+            grid-row: 3/5;
+        }
+        #arrow1 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        #icon-2 {
+            grid-column: 3/4;
+            grid-row: 2/4;
+        }
+        #arrow2 {
+            grid-column: 4/5;
+            grid-row: 3/4;
+        }
+        #icon-3 {
+            grid-column: 5/6;
+            grid-row: 3/5;
+        }
+        #arrow3 {
+            grid-column: 6/7;
+            grid-row: 3/4;
+        }
+        #icon-4 {
+            grid-column: 7/8;
+            grid-row: 2/4;
+        }
+        .modal {
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            z-index: 2;
+        }
+        .viewer {
+            background-color: white;
+            margin: 50px 60px;
+            padding: 20px;
+        }
+        .close-viewer {
+            border: none;
+            background-color: transparent;
+            color: white;
+            float: right;
+            padding: 30px;
+            font-size: 2em;
+        }
+        li {
+            padding: 3px;
+        }
+        span {
+            font-weight: bold;
+        }
+        .viewer p {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cycle">
+        <div id="plo">
+            <h2>Year 1. PLOs</h2>
+            <p>Program Mapping</p>
+        </div>
+        <h2 id="clo">Year 2. CLOs</h2>
+        <h2 id="assess">Year 3. Assessments</h2>
+        <div id="review">
+            <h2>Year 4. Review</h2>
+            <p>Vision & Planning</p>
+        </div> 
+        <img class="icon" id="icon-1" src="images/plo-icon.png" alt="PLO Icon">
+        <img id="arrow1" src="images/arrow-up.png" alt="Arrow Up">
+        <img class="icon" id="icon-2" src="images/clo-icon.png" alt="CLO Icon">
+        <img id="arrow2" src="images/arrow-down.png" alt="Arrow Up">
+        <img class="icon" id="icon-3" src="images/asses-icon.png" alt="Assessment Icon">
+        <img id="arrow3" src="images/arrow-up.png" alt="Arrow Up">
+        <img class="icon" id="icon-4" src="images/review-icon.png" alt="Review Icon">
+    </div>
+    <script>
+    
+
+
+
+         // modal
+
+function viewerTemplate(num) {
+    console.log(num);
+    if (num == 1) {
+        let color = 'rgba(52, 110, 123, .85)';
+        let html = `
+        <div class="modal" style="background-color: ${color};">
+        <button class="close-viewer">X</button>
+        <div class="viewer">
+            <h1>Year 1: PLOs & Program Mapping</h1>
+            <p><span>Goal:</span> Develop and review program curriculum maps and 8-semester plans (or 10-semester plans) to ensure coherent progression and alignment with PLOs.</p>
+            <p><span>Activities:</span></p>
+            <ol>
+                <li>Review initiatives that addressed student learning review feedback and goals. Modify and revise plan to accomplish the initiatives. Initiatives should be reviewed each semester. Make changes in the approach or content of the initiatives as required.  </li>
+                <li>Create detailed program curriculum maps linking key course assessments to PLOs. Template and instructions see: <a href="https://www.byui.edu/executive-strategy-and-planning/institutional-effectiveness/outcomes-and-assessments">https://www.byui.edu/executive-strategy-and-planning/institutional-effectiveness/outcomes-and-assessments</a></li>
+                <li>Develop or refine 8-semester plans for guided and effective program completion. Show prerequisites on the plan so that the workflow or sequences of courses are clear. Consider the complexity of your program for the students to navigate and discuss ways to reduce the complexity.  </li>
+                <li>Analyze data from assessments to evaluate student achievement of PLOs. </li>
+                <li>Promote evidence-based decision making by reviewing program data, student feedback, and assessment outcomes and informing faculty of the findings.  </li>
+                <li>Review and update PLOs in consultation with faculty, students, and industry partners. Possibly engage the C3 process designed to assist with identification and documentation of PLOs. </li>
+                <li>Possibly engage <a href="https://www.byui.edu/campus-curriculum-development/assessment-services">BYUI Assessment Services</a> to review the PLOs. </li>
+                <li>Evaluate feedback from industry partners and review benchmark data, if available, to ensure that PLOs and curricula remain relevant and aligned with current professional standards and employer expectations. You may want to engage Career Services to assist with an Alumni servey or other way to obtain industry feedback on the skills needed. </li>
+                <li>Report findings in the annual report, focusing on program coherence and student achievement. </li>
+                <li>Suggest to faculty that they engage in professional development opportunities related to curriculum design, assessment, and pedagogical innovation. </li>
+            </ol>
+
+        </div>
+        </div>`;
+        return html;
+    } else if (num == 2) {
+        let color = 'rgba(33, 61, 90, .85)';
+        let html = `
+        <div class="modal" style="background-color: ${color};">
+        <button class="close-viewer">X</button>
+        <div class="viewer">
+            <h1>Year 2: Course Learning Outcomes</h1>
+            <p><span>Goal:</span> Review and refine Course Learning Outcomes (CLOs) for clarity, specificity, and alignment with disciplinary standards and industry needs. </p>
+            <p><span>Activities:</span></p>
+            <ol>
+                <li>Put initiatives in place to address student learning review feedback and goals. Review progress of the initiatives each semester. Make changes in the approach or content of the initiatives as required.   </li>
+                <li>Ask Assessment Services to conduct workshops on writing effective CLOs. </li>
+                <li>Engage Assessment Services to conduct CLO reviews. </li>
+                <li>Introduce the concept of Bloom's Taxonomy for selecting appropriate CLO action verbs. </li>
+                <li>Analyze current CLOs for all courses in the program for redundancy and alignment with PLOs. </li>
+                <li>Engage with industry partners and review benchmark data, if available, to ensure that PLOs and curricula remain relevant and aligned with current professional standards and employer expectations. </li>
+                <li>Promote evidence-based decision making by reviewing program data, student feedback, and assessment outcomes and informing faculty of the findings.  </li>
+                <li>Complete the annual report focusing on learning outcome refinement. </li>
+                <li>Suggest to faculty that they engage in professional development opportunities related to curriculum design, assessment, and pedagogical innovation. </li>
+            </ol>
+        </div>
+        </div>`;
+        return html;
+    } else if (num == 3) {
+        let color = 'rgba(68, 107, 88, .85)';
+        let html = `
+        <div class="modal" style="background-color: ${color};">
+        <button class="close-viewer">X</button>
+        <div class="viewer">
+            <h1>Year 3: Assessments</h1>
+            <p><span>Goal:</span> Strengthen the connection between learning outcomes and assessments.</p>
+            <p><span>Activities:</span></p>
+            <ol>
+                <li>Review initiatives that addressed student learning review feedback and goals. Modify and revise plan to accomplish the initiatives. Initiatives should be reviewed each semester. Make changes in the approach or content of the initiatives as required.   </li>
+                <li>Review and discuss types of assessments best suited for various kinds of learning outcomes. Explore innovative assessment methods, including formative and summative assessments. </li>
+                <li>Engage with industry partners and review benchmark data, if available, to ensure that PLOs and curricula remain relevant and aligned with current professional standards and employer expectations.  </li>
+                <li>Analyze data from assessments to evaluate student achievement of PLOs. </li>
+                <li>Promote evidence-based decision making by reviewing program data, student feedback, and assessment outcomes and informing faculty of the findings.  </li>
+                <li>Complete the informal annual report, highlighting assessment strategies and refinements. </li>
+                <li>Suggest to faculty that they engage in professional development opportunities related to curriculum design, assessment, and pedagogical innovation. </li>
+            </ol>
+        </div>
+        </div>`;
+        return html;
+    } else {
+        let color = 'rgba(60, 46, 78, .85)';
+        let html = `
+        <div class="modal" style="background-color: ${color};">
+        <button class="close-viewer">X</button>
+        <div class="viewer">
+            <h1>Year 4: Review and Planning</h1>
+            <p><span>Goal:</span> Use the University Curriculum Council (UCC) Program Student Learning Review template to review the program, focusing on improvements designed to meet future industry and educational challenges. Program Student Learning Review tends to proceed as described in the following list: </p>
+            <ol>
+                <li>Course and program outcomes. What process was used to identify, validate, write, and ensure quality CLOs and PLOs? </li>
+                <li>Curriculum Map and Assessment Table. </li>
+                <li>Your pattern of review and discussion, including the quality of data collected and reviewed. Meeting minutes can be useful evidence of the committee’s process.  </li>
+                <li>How are you “closing-the-loop" (terminology used in UCC)? Closing-the-loop includes the following items:
+                    <ul>
+                        <li>Impetus: What data, input, or discussion led to the proposed change? </li>
+                        <li>Intervention: What did you change to get the desired improvement? </li>
+                        <li>Assessment: What data was gathered to determine if the intervention improved learning? </li>
+                        <li>Results: What was the outcome of the intervention and assessment? 
+                    </ul>
+                </li>
+                <li>Plans to improve the program.  </li>
+            </ol>
+            <p><span>Activities:</span></p>
+            <ol>
+                <li>Seek the Spirit’s help in seeing around the corners: what themes have industry been sharing with you, what is changing in your industry, have you had any feelings about what the future of your industry may demand, what do your students say about how your program has helped them be prepared to meet the changes in industry, etc.</li>
+                <li>Develop forward-looking strategies for curriculum, content, and assessment enhancements. </li>
+                <li>Engage with industry partners and review benchmark data, if available, to ensure that PLOs and curricula remain relevant and aligned with current professional standards and employer expectations.  </li>
+                <li>Promote evidence-based decision making by reviewing program data, student feedback, and assessment outcomes and informing faculty of the findings.  </li>
+                <li>Prepare the formal program student learning review report, incorporating strategic initiatives and evidence of student learning in relation to PLOs. </li>
+                <li>During the Fall Semester, present findings and plans to the University Curriculum Council for feedback and approval. </li>
+                <li>Suggest to faculty that they engage in professional development opportunities related to curriculum design, assessment, and pedagogical innovation. </li>
+            </ol>
+        </div>
+        </div>`;
+        return html;
+    }
+    
+}
+
+function viewHandler(event) {
+   
+	// create a variable to hold the element that was clicked on from event.target
+    const img = event.target.closest(".icon");
+    console.log(img);
+
+	// get the src attribute from that element and 'split' it on the "-"
+    let attribute = img.getAttribute('id');
+    let beg = attribute.split("-");
+    
+	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
+    let num = beg[1];
+    console.log(num);
+
+	// insert the viewerTemplate into the top of the body element
+    let body = document.querySelector('body');
+    let html = viewerTemplate(num);
+
+	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
+    body.insertAdjacentHTML('afterbegin', html)
+
+	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+    let modalx = document.querySelector('.close-viewer');
+    modalx.addEventListener('click', function(){
+        let text = document.querySelector('.modal');
+        text.remove();
+    })
+}
+let cycle = document.querySelector('#cycle');
+cycle.addEventListener('click', viewHandler);
+
+
+    </script>
+</body>
+</html>
