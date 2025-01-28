@@ -78,6 +78,25 @@
             grid-column: 7/8;
             grid-row: 2/4;
         }
+        #one {
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        #two {
+            grid-column: 3/4;
+            grid-row: 5/6;
+        }
+        #three {
+            grid-column: 5/6;
+            grid-row: 5/6;
+        }
+        #four {
+            grid-column: 7/8;
+            grid-row: 5/6;
+        }
+        #one, #two, #three, #four {
+            margin-top: 50px;
+        }
         .modal {
             position: fixed;
             top: 0; left: 0; bottom: 0; right: 0;
@@ -105,6 +124,12 @@
         .viewer p {
             font-size: 1.3em;
         }
+        #cycle h2 {
+            text-align: center;
+        }
+        #cycle li {
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -127,6 +152,35 @@
         <img class="icon" id="icon-3" src="images/asses-icon.png" alt="Assessment Icon">
         <img id="arrow3" src="images/arrow-up.png" alt="Arrow Up">
         <img class="icon" id="icon-4" src="images/review-icon.png" alt="Review Icon">
+        <div id="four">
+            <h2>2025 Review  (Year 4)</h2>
+            <ul>
+                <li>Engineering Tech</li>
+                <li>Math</li>
+            </ul>
+        </div>
+        <div id="three">
+            <h2>2026 Review  (Year 3)</h2>
+            <ul>
+                <li>Computer Science & Engineering</li>
+                <li>Chemistry</li>
+            </ul>
+        </div>
+        <div id="two">
+            <h2>2027 Review  (Year 2)</h2>
+            <ul>
+                <li>Mechanical & Civil Engineering</li>
+                <li>Physics</li
+                    >
+            </ul>
+        </div>
+        <div id="one">
+            <h2>2028 Review  (Year 1)</h2>
+            <ul>
+                <li>Design & Construction Management</li>
+                <li>Geology & Environmental Sciences</li>
+            </ul>
+        </div>
     </div>
     <script>
     
