@@ -310,8 +310,11 @@ function viewerTemplate(num) {
     
 }
 
+
+
+
 function viewHandler(event) {
-   
+  
 	// create a variable to hold the element that was clicked on from event.target
     const img = event.target.closest(".icon");
     console.log(img);
@@ -333,13 +336,29 @@ function viewHandler(event) {
 
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
     let modalx = document.querySelector('.close-viewer');
+    let modal = document.querySelector('.modal');
     modalx.addEventListener('click', function(){
-        let text = document.querySelector('.modal');
-        text.remove();
+        
+        modal.remove();
     })
+
+    window.addEventListener("click", function (event) {
+    // close the modal when user clicks outside of the 
+    if (event.target === modal) {
+        modal.remove();
+    }
+    });
+    // allow the escape key to close the modal as well.
+    window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.remove();
+        }
+    });
+    
 }
 let cycle = document.querySelector('#cycle');
 cycle.addEventListener('click', viewHandler);
+
 
 
     </script>
