@@ -9,6 +9,10 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
+        #content {
+            width: 100%;
+            height: 800px;
+        }
         #cycle {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -143,71 +147,73 @@
     </style>
 </head>
 <body>
-    <h1>Program Review Cycle</h1>
-    <p><em>Click on each year's icon for more information</em></p>
-    
-    <div id="cycle">
-        <div id="plo">
-            <h2>Year 1</h2>
-            <h2>PLOs</h2>
-            <p>Program Mapping</p>
-        </div>
-        <div id="clo">
-            <h2>Year 2</h2>
-            <h2>CLOs</h2>
-        </div>
-        <div id="assess">
-            <h2 >Year 3</h2>
-            <h2>Assessments</h2>
-        </div>
-        <div id="review">
-            <h2>Year 4</h2>
-            <h2>Review</h2>
-            <p>Vision & Planning</p>
+    <div id="content">
+        <h1>Program Review Cycle</h1>
+        <p><em>Click on each year's icon for more information</em></p>
+        
+        <div id="cycle">
+            <div id="plo">
+                <h2>Year 1</h2>
+                <h2>PLOs</h2>
+                <p>Program Mapping</p>
+            </div>
+            <div id="clo">
+                <h2>Year 2</h2>
+                <h2>CLOs</h2>
+            </div>
+            <div id="assess">
+                <h2 >Year 3</h2>
+                <h2>Assessments</h2>
+            </div>
+            <div id="review">
+                <h2>Year 4</h2>
+                <h2>Review</h2>
+                <p>Vision & Planning</p>
+            </div> 
+            <img class="icon" id="icon-1" src="images/plo-icon.png" alt="PLO Icon">
+            <img id="arrow1" src="images/arrow-up.png" alt="Arrow Up">
+            <img class="icon" id="icon-2" src="images/clo-icon.png" alt="CLO Icon">
+            <img id="arrow2" src="images/arrow-down.png" alt="Arrow Up">
+            <img class="icon" id="icon-3" src="images/asses-icon.png" alt="Assessment Icon">
+            <img id="arrow3" src="images/arrow-up.png" alt="Arrow Up">
+            <img class="icon" id="icon-4" src="images/review-icon.png" alt="Review Icon">
+            <div id="four">
+                <!-- <h2>2025 Review</h2>   -->
+                <h2>(Year 4)</h2>
+                <ul class="departments">
+                    <li>Computer Science & Engineering</li>
+                    <li>Chemistry</li>
+                </ul>
+            </div>
+            <div id="three">
+                <!-- <h2>2026 Review</h2> -->
+                <h2>(Year 3)</h2>
+                <ul class="departments">
+                    <li>Mechanical & Civil Engineering</li>
+                    <li>Physics</li>
+                </ul>
+            </div>
+            <div id="two">
+                <!-- <h2>2027 Review</h2> -->
+                <h2>(Year 2)</h2>
+                <ul class="departments">
+                    <li>Design & Construction Management</li>
+                    <li>Geology & Environmental Sciences</li>
+                </ul>
+            </div>
+            <div id="one">
+                <!-- <h2>2028 Review</h2> -->
+                <h2>(Year 1)</h2>
+                <ul class="departments">
+                    <li>Engineering Tech</li>
+                    <li>Math</li>
+                </ul>
+            </div>
         </div> 
-        <img class="icon" id="icon-1" src="images/plo-icon.png" alt="PLO Icon">
-        <img id="arrow1" src="images/arrow-up.png" alt="Arrow Up">
-        <img class="icon" id="icon-2" src="images/clo-icon.png" alt="CLO Icon">
-        <img id="arrow2" src="images/arrow-down.png" alt="Arrow Up">
-        <img class="icon" id="icon-3" src="images/asses-icon.png" alt="Assessment Icon">
-        <img id="arrow3" src="images/arrow-up.png" alt="Arrow Up">
-        <img class="icon" id="icon-4" src="images/review-icon.png" alt="Review Icon">
-        <div id="four">
-            <!-- <h2>2025 Review</h2>   -->
-            <h2>(Year 4)</h2>
-            <ul class="departments">
-                <li>Computer Science & Engineering</li>
-                <li>Chemistry</li>
-            </ul>
-        </div>
-        <div id="three">
-            <!-- <h2>2026 Review</h2> -->
-            <h2>(Year 3)</h2>
-            <ul class="departments">
-                <li>Mechanical & Civil Engineering</li>
-                <li>Physics</li>
-            </ul>
-        </div>
-        <div id="two">
-            <!-- <h2>2027 Review</h2> -->
-            <h2>(Year 2)</h2>
-            <ul class="departments">
-                <li>Design & Construction Management</li>
-                <li>Geology & Environmental Sciences</li>
-            </ul>
-        </div>
-        <div id="one">
-            <!-- <h2>2028 Review</h2> -->
-            <h2>(Year 1)</h2>
-            <ul class="departments">
-                <li>Engineering Tech</li>
-                <li>Math</li>
-            </ul>
-        </div>
-    </div> 
-    <div id="prc">
-        <img src="images/cycle.png" width="80%" style="margin: 0 auto; display:block;" alt="cycle from Brian Pope">
+        <div id="prc">
+            <img src="images/cycle.png" width="80%" style="margin: 0 auto; display:block;" alt="cycle from Brian Pope">
 
+        </div>
     </div>
     <script>
     
